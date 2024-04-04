@@ -139,8 +139,6 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        DreamWalk allows fine-grained control of style text-to-image generation.
-      </h2>
     </div>
   </div>
 </section>
@@ -156,11 +154,11 @@
           <p>
             Text-conditioned diffusion models can generate impressive images, but fall short when it comes to fine-grained control. Unlike direct-editing tools like
             Photoshop, text conditioned models require the artist to perform “prompt engineering,” constructing special text sentences to control the style or amount of a
-            particular subject present in the output image. Our goal is to provide fine-grained control over the style and substance specified by the prompt, for example to
-            adjust the intensity of styles in different regions of the image. Our approach is to decompose the text prompt into conceptual elements, and apply a
-            separate guidance term for each element in a single diffusion process. We introduce guidance scale functions to control when in the diffusion process and where
-            in the image to intervene. Since the method is based solely on adjusting diffusion guidance, it does not require fine-tuning or manipulating the internal layers
-            of the diffusion model's neural network, and can be used in conjunction with LoRA- or DreamBooth-trained models. </p>
+            particular subject present in the output image. Our goal is to provide fine-grained control over the style and substance specified by the prompt, for example
+            to adjust the intensity of styles in different regions of the image. Our approach is to decompose the text prompt into conceptual elements, and
+            apply a separate guidance term for each element in a single diffusion process. We introduce guidance scale functions to control when in the diffusion process
+            and where in the image to intervene. Since the method is based solely on adjusting diffusion guidance, it does not require fine-tuning or manipulating the
+            internal layers of the diffusion model's neural network, and can be used in conjunction with LoRA- or DreamBooth-trained models.  </p>
         </div>
       </div>
     </div>
@@ -192,6 +190,13 @@
   <div class="hero-body">
     <div class="container">
   <h2 class="title is-3"> Single Style Application</h2>
+  <p>DreamWalk allows fine-grained control of style text-to-image generation. We start with a base generated image (left), and apply style guidance terms with guidance scale functions to create different stylized images. Our style application works on any diffusion model regardless of
+    architecture differences. </p>
+    <img src="static/images/walk-postsig.png" alt="MY ALT TEXT" class="center"/>
+  <p> Changing the
+  magnitude of the guidance scale has different effects based on the temporal component of guidance scale functions. Increasing the magnitude of a guidance scale without
+  time dependence (bottom row) can change the layout of the image. Our default setting for temporal dependence preserves the rough layout of the base
+  generation while still increasing the amount of style being added (top row). </p>
   <div class="row">
     <div class="col-md-4">
       <img src="static/images/Village/village_base.png" alt="MY ALT TEXT" class="center"/>        
@@ -331,37 +336,6 @@
     "A serene garden with a serene pond and arched bridges".
   </p>
 </div>
-
-
-<!-- Video carousel -->
-  <div class="hero-body">
-    <div class="col-md-2">
-      <div class="image-slider">
-        <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/01/picasso_fish" data-imgid="sliderImage3">
-        <img id="sliderImage3" src="static/images/Spatial/01/picasso_fish00001.png" alt="Image">
-        <h2>"Fish swimming down a stream (SDXL: Picasso)"</h2>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="image-slider">
-        <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/02/monet_dog" data-imgid="sliderImage4">
-        <img id="sliderImage4" src="static/images/Spatial/02/monet_dog00001.png" alt="Image">
-        <h2>"Dog running on a beach (SDXL: Monet)"</h2>
-      </div>  
-    </div>
-    <div class="image-slider">
-      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/03/bird_hokusai" data-imgid="sliderImage5">
-      <img id="sliderImage5" src="static/images/Spatial/03/bird_hokusai00001.png" alt="Image">
-      <h2>"Bird sitting on a tree branch (SDXL: Hokusai)"</h2>
-    </div>  
-    <div class="image-slider">
-      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/04/camp_hokusai" data-imgid="sliderImage6">
-      <img id="sliderImage6" src="static/images/Spatial/04/camp_hokusai00001.png" alt="Image">
-      <h2>"Campsite with a fire at night (SDXL: Hokusai)"</h2>
-    </div>  
-  </div>
-  </div>
-  </div>
 </section>
 <!-- End video carousel -->
 
@@ -370,12 +344,13 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Interpolation between Styles</h2>
+      <p>Our method also allows users to interpolate between multiple styles. We show that our smooth interpolation between two different styles for models with very different architectures SD1.5 and SDXL. </p>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
         <img src="static/images/Style-interp/24305-children.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          A group of children flying kites on a breezy summer day at the park in the style of {Monet, Magritte}.
+          (SD1.5) A group of children flying kites on a breezy summer day at the park in the style of {Monet, Magritte}.
           First Row: CLIP embedding baseline.
           Second Row: Ours.
         </h2>
@@ -384,7 +359,7 @@
         <!-- Your image here -->
         <img src="static/images/Style-interp/69240-horse.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          A Horse galloping freely across vast open field in the style of {water color, pixel art}.
+          (SD1.5) A Horse galloping freely across vast open field in the style of {water color, pixel art}.
           First Row: CLIP embedding baseline.
           Second Row: Ours.        
         </h2>
@@ -393,7 +368,7 @@
         <!-- Your image here -->
         <img src="static/images/Style-interp/88200-sunset.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Artist painting vivid sunset on beach canvas in the style of {Picasso, Hokusai}.
+          (SD1.5) Artist painting vivid sunset on beach canvas in the style of {Picasso, Hokusai}.
          First Row: CLIP embedding baseline.
          Second Row: Ours.   
        </h2>
@@ -414,7 +389,6 @@
   <img id="sliderImage2" src="static/images/SlideBars/02/dog_Hokusai_Monet_00000.png" alt="Image">
   <h2>"A dog running on a beach (SDXL: Monet -> Hokusai)"</h2>
   </div>
-  <script src="slider.js"></script>
 </div>
 </section>
 <!-- End image carousel -->
@@ -423,7 +397,38 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Spatially Varying Guidance Function</h2>
+      <p>Based on the base image, style guidance can be applied to different parts of the image. This allows
+        users to define their own masks manually or with computed signals like
+        bounding boxes.</p>
       <img src="static/images/Spatial/spatial.png" alt="MY ALT TEXT" class="center"/>
+      <div class="hero-body">
+        <div class="col-md-2">
+          <div class="image-slider">
+            <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/01/picasso_fish" data-imgid="sliderImage3">
+            <img id="sliderImage3" src="static/images/Spatial/01/picasso_fish00001.png" alt="Image">
+            <h2>"Fish swimming down a stream (SDXL: Picasso)"</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="image-slider">
+            <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/02/monet_dog" data-imgid="sliderImage4">
+            <img id="sliderImage4" src="static/images/Spatial/02/monet_dog00001.png" alt="Image">
+            <h2>"Dog running on a beach (SDXL: Monet)"</h2>
+          </div>  
+        </div>
+        <div class="image-slider">
+          <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/03/bird_hokusai" data-imgid="sliderImage5">
+          <img id="sliderImage5" src="static/images/Spatial/03/bird_hokusai00001.png" alt="Image">
+          <h2>"Bird sitting on a tree branch (SDXL: Hokusai)"</h2>
+        </div>  
+        <div class="image-slider">
+          <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/04/camp_hokusai" data-imgid="sliderImage6">
+          <img id="sliderImage6" src="static/images/Spatial/04/camp_hokusai00001.png" alt="Image">
+          <h2>"Campsite with a fire at night (SDXL: Hokusai)"</h2>
+        </div>  
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   </section>
@@ -432,6 +437,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Controllable subject vs. prompt emphasis</h2>
+      <p>Our formulation can explore adherence to a DreamBooth subject or adherence to the text prompt.</p>
       <img src="static/images/DB/dbteaser.png" alt="MY ALT TEXT" class="center"/>
       <!-- <img src="static/images/DB/dbteaser.png" alt="MY ALT TEXT"/> -->
 
@@ -447,6 +453,8 @@
       <pre><code>BibTex Code Here</code></pre>
     </div>
 </section>
+
+<script src="slider.js"></script>
 <!--End BibTex citation -->
   </body>
   </html>
