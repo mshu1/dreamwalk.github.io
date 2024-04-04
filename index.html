@@ -101,7 +101,7 @@
                   </span>
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -109,7 +109,7 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -338,16 +338,20 @@
 <!-- Video carousel -->
 <section class="hero is-small hero is-light">
   <div class="hero-body">
-    <div class="image-slider">
-      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/01/picasso_fish" data-imgid="sliderImage3">
-      <img id="sliderImage3" src="static/images/Spatial/01/picasso_fish00001.png" alt="Image">
-      <h2>"Fish swimming down a stream (SDXL: Picasso)"</h2>
+    <div class="col-md-2">
+      <div class="image-slider">
+        <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/01/picasso_fish" data-imgid="sliderImage3">
+        <img id="sliderImage3" src="static/images/Spatial/01/picasso_fish00001.png" alt="Image">
+        <h2>"Fish swimming down a stream (SDXL: Picasso)"</h2>
+      </div>
     </div>
-    <div class="image-slider">
-      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/02/monet_dog" data-imgid="sliderImage4">
-      <img id="sliderImage4" src="static/images/Spatial/02/monet_dog00001.png" alt="Image">
-      <h2>"Dog running on a beach (SDXL: Monet)"</h2>
-    </div>  
+    <div class="col-md-6">
+      <div class="image-slider">
+        <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/02/monet_dog" data-imgid="sliderImage4">
+        <img id="sliderImage4" src="static/images/Spatial/02/monet_dog00001.png" alt="Image">
+        <h2>"Dog running on a beach (SDXL: Monet)"</h2>
+      </div>  
+    </div>
     <div class="image-slider">
       <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/03/bird_hokusai" data-imgid="sliderImage5">
       <img id="sliderImage5" src="static/images/Spatial/03/bird_hokusai00001.png" alt="Image">
@@ -408,7 +412,7 @@
   <div class="image-slider">
   <input type="range" min="1" max="79" value="1" class="slider" id="myRange2" data-prefix="static/images/SlideBars/02/dog_Hokusai_Monet_" data-imgid="sliderImage2">
   <img id="sliderImage2" src="static/images/SlideBars/02/dog_Hokusai_Monet_00000.png" alt="Image">
-  <h2>"A dog running on a beach (SDXL: Hokusai -> Monet)"</h2>
+  <h2>"A dog running on a beach (SDXL: Monet -> Hokusai)"</h2>
   </div>
   <script src="slider.js"></script>
 </section>

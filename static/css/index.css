@@ -162,8 +162,8 @@ body {
   height: auto; /* Maintain aspect ratio */
   display: inline-block;
   text-align: center;
-
 }
+
 .col-md-4 img{
   height: auto;
   position: relative;
@@ -177,7 +177,6 @@ body {
   height: auto; /* Maintain aspect ratio */
   display: inline-block;
 }
-
 
 
 .disable-scrollbars::-webkit-scrollbar {
