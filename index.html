@@ -167,8 +167,31 @@
   </div>
 </section>
 <!-- End paper abstract -->
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://www.youtube.com/embed/LSPpHcKCCDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+<section class="section">
 <section class="showcase">
   <div class="row">
+    <h2 class="title is-3">Single Style Interpolation</h2>
     <div class="col-md-4">
       <img src="static/images/Village/village_base.png" alt="MY ALT TEXT" class="center"/>        
       <!-- <h2 class="subtitle has-text-centered">
@@ -179,16 +202,16 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item has-text-centered"> <!-- Add has-text-centered class here -->
           <!-- Your image here -->
-          <img src="static/images/Village/village_Hokusai.png" alt="MY ALT TEXT"/>
+          <img src="static/images/Village/village_pixel.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Hokusai
+            Pixel Art
           </h2>
         </div>
         <div class="item has-text-centered"> <!-- Add has-text-centered class here -->
           <!-- Your image here -->
-          <img src="static/images/Village/village_pixel.png" alt="MY ALT TEXT"/>
+          <img src="static/images/Village/village_Hokusai.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Pixel Art
+            Hokusai
           </h2>
         </div>
         <div class="item has-text-centered"> <!-- Add has-text-centered class here -->
@@ -225,6 +248,7 @@
       "A peaceful riverside village with charming old cottages".
     </p>
   </div>
+</section>
 </section>
 
 <div class="row">
@@ -360,25 +384,7 @@
   </p>
 </div> -->
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/LSPpHcKCCDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+
 
 
 <!-- Video carousel -->
@@ -409,11 +415,59 @@
 </section> -->
 <!-- End video carousel -->
 
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="image-slider">
+      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/01/picasso_fish" data-imgid="sliderImage3">
+      <img id="sliderImage3" src="static/images/Spatial/01/picasso_fish00001.png" alt="Image">
+      <h2>"Fish swimming down a stream (SDXL: Picasso)"</h2>
+    </div>
+    <div class="image-slider">
+      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/02/monet_dog" data-imgid="sliderImage4">
+      <img id="sliderImage4" src="static/images/Spatial/02/monet_dog00001.png" alt="Image">
+      <h2>"Dog running on a beach (SDXL: Monet)"</h2>
+    </div>  
+    <div class="image-slider">
+      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/03/bird_hokusai" data-imgid="sliderImage5">
+      <img id="sliderImage5" src="static/images/Spatial/03/bird_hokusai00001.png" alt="Image">
+      <h2>"Bird sitting on a tree branch (SDXL: Hokusai)"</h2>
+    </div>  
+    <div class="image-slider">
+      <input type="range" min="1" max="128" value="1" class="slider" id="myRange" data-prefix="static/images/Spatial/04/camp_hokusai" data-imgid="sliderImage6">
+      <img id="sliderImage6" src="static/images/Spatial/04/camp_hokusai00001.png" alt="Image">
+      <h2>"Campsite with a fire at night (SDXL: Hokusai)"</h2>
+    </div>  
+    <!-- <div class="container">
+      <h2 class="title is-3">Spatial Wipe</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/spatialwipe4_fishPicasso_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video controls>
+          <source src="static/videos/spatialwipe4_dogMonet_ours_basescale6_one18_updowny1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video controls>
+          <source src="static/videos/spatialwipe4_birdHokusai_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video controls>
+          <source src="static/videos/spatialwipe4_campsiteHokusai_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>      
+    </div> -->
+  </div>
+</section>
+<!-- End video carousel -->
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Style Interpolation</h2>
+      <h2 class="title is-3">Interpolation between Styles</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
@@ -460,34 +514,6 @@
   <script src="slider.js"></script>
 </section>
 <!-- End image carousel -->
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Spatial Wipe</h2>
-      <div class="video-container">
-        <video controls>
-          <source src="static/videos/spatialwipe4_fishPicasso_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls>
-          <source src="static/videos/spatialwipe4_dogMonet_ours_basescale6_one18_updowny1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls>
-          <source src="static/videos/spatialwipe4_birdHokusai_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls>
-          <source src="static/videos/spatialwipe4_campsiteHokusai_ours_basescale6_one12_updowny1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>      
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 <section class="hero is-small is-light">
   <div class="hero-body">
